@@ -1,12 +1,11 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "outDir": "dist",
-        "target": "es2015",
-        "module": "es2015",
-        "moduleResolution": "node"
-    },
-    "files": [
-        "src/index.ts"
-    ]
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "dist",
+    "target": "ES6",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+  },
+  "files": ["src/index.ts"]
 }
