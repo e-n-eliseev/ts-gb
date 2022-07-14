@@ -1,13 +1,13 @@
 import { Product } from "./Product";
 
-enum Type {
+enum TypeMagazine {
   COMICS,
   POPULAR_SCIENCE,
 }
 
-export class Magazine extends Product<Type> {
+export class Magazine extends Product<TypeMagazine> {
 
   constructor(title: string, amount:number, price?: number) {
-    super(title, amount, Type.COMICS, price);
+    super(title, amount, TypeMagazine.COMICS, price);
   }
 }
