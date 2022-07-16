@@ -1,12 +1,12 @@
 import { MapKey } from "../types/MapKey";
 
-export class MyMap<K extends MapKey = string, V = any> {
+export class MyMap<K extends MapKey = MapKey, V = any> {
   data = {} as Record<K, V>;
 
   set(key: K, value: V): void {
     this.data[key] = value;
   }
-
+  //реализованный метод SetAll
   setAll(arr: { key: K; value: V }[]): void {
     arr.forEach(({ key, value }) => this.set(key, value));
   }

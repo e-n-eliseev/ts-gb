@@ -25,21 +25,23 @@ export class Product<T = any> implements IProduct<T> {
     return this.amount;
   }
 
-  showData(): void{
-      console.log(
-        `${this.title} - ${this.type} - ${this.price}`
-      );
-  };
-  
-  buy(amount:number, money:number):void{
+  //Реализация метода showData
+  showData(): void {
+    console.log(`${this.title} - ${this.type} - ${this.price}`);
+  }
+
+  //Реализация метода покупки
+  buy(amount: number, money: number): void {
     if (!this.canBuy()) {
-      console.log("Вы не можете приобрести данный товар, его нет в наличии!")
+      console.log("Вы не можете приобрести данный товар, его нет в наличии!");
     }
-    if (this.amount<amount) {
+    if (this.amount < amount) {
       console.log("На складе нет необходимого количества товара!");
     }
-    if (this.price&&(this.price * amount)<money) {
-      console.log("У вас недостаточно средств для приобретения такого количества товара!");
+    if (this.price && this.price * amount < money) {
+      console.log(
+        "У вас недостаточно средств для приобретения такого количества товара!"
+      );
     }
     console.log("Товар приобретен!");
   }
