@@ -1,0 +1,1 @@
+export type MapKey = string | number | symbol;
